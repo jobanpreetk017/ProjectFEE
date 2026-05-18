@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2632 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 107, 97, 0.5);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #ff6f61, #ffb347);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.logo p {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff6f61;
+    border-bottom-color: #ff6f61;
+}
+
+.gallery-title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem 3rem;
+}
+
+.gallery-card {
+    background: rgba(255, 248, 235, 0.95);
+    border-radius: 25px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 160px;
+    transition: 0.3s;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeScale 0.5s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    background: white;
+}
+
+.gallery-emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-card h3 {
+    color: #5a3a2a;
+    font-size: 1.2rem;
+}
+
+.gallery-card p {
+    color: #888;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+@keyframes fadeScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery-card {
+        width: 130px;
+    }
+
+    .gallery-emoji {
+        font-size: 3rem;
+    }
+}

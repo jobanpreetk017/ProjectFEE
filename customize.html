@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomCraft | Customize Your Room</title>
+    <link rel="stylesheet" href="customize.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>RoomCraft</h1>
+            <p>design your dream space</p>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="customize.html" class="active">Customize</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="customize-container">
+        <div class="editor-layout">
+            <div class="room-section">
+                <div class="room-toolbar">
+                    <div class="tool-group">
+                        <label>🎨 Floor Color:</label>
+                        <input type="color" id="floorColor" value="#f5e6d3">
+                    </div>
+                    <button id="clearRoomBtn" class="clear-btn">🗑️ Clear All</button>
+                </div>
+                <div id="roomCanvas" class="room-canvas"></div>
+                <div class="info-bar">
+                    💡 Double-click on furniture to resize | Drag to reposition | Click + Delete key to remove
+                </div>
+            </div>
+            <div class="furniture-sidebar">
+                <h3>🛋️ Drag & Drop Furniture</h3>
+                <div class="furniture-list" id="furnitureList">
+                    <div class="furniture-item" draggable="true" data-furniture="🪑" data-name="Chair">
+                        <div class="furniture-emoji">🪑</div>
+                        <span>Chair</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="🍽️" data-name="Table">
+                        <div class="furniture-emoji">🍽️</div>
+                        <span>Table</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="🛏️" data-name="Bed">
+                        <div class="furniture-emoji">🛏️</div>
+                        <span>Bed</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="🛋️" data-name="Sofa">
+                        <div class="furniture-emoji">🛋️</div>
+                        <span>Sofa</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="💡" data-name="Lamp">
+                        <div class="furniture-emoji">💡</div>
+                        <span>Lamp</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="📚" data-name="Desk">
+                        <div class="furniture-emoji">📚</div>
+                        <span>Desk</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="🚪" data-name="Door">
+                        <div class="furniture-emoji">🚪</div>
+                        <span>Door</span>
+                    </div>
+                    <div class="furniture-item" draggable="true" data-furniture="🖼️" data-name="Painting">
+                        <div class="furniture-emoji">🖼️</div>
+                        <span>Painting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="customize.js"></script>
+</body>
+
+</html>

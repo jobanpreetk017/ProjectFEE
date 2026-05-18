@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f2b3c 0%, #0f1a24 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 107, 97, 0.5);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #ff6f61, #ffb347);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.logo p {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff6f61;
+    border-bottom-color: #ff6f61;
+}
+
+.contact-card {
+    max-width: 550px;
+    margin: 4rem auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 40px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    color: #2c3e2f;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    color: #666;
+    margin-bottom: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0cba0;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: 0.2s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.2);
+}
+
+button[type="submit"] {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background: #ff4a3b;
+    transform: scale(0.98);
+}
+
+#formStatus {
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-card {
+        margin: 2rem;
+        padding: 1.5rem;
+    }
+}
